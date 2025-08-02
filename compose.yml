@@ -1,0 +1,14 @@
+services:
+  junk-file-cleaner:
+    image: rudoyeugene/playground:junk_file_cleaner
+    container_name: junk-file-cleaner
+    environment:
+      SCHEDULE: "0 2 * * *"
+      LOCATIONS: "/archive"
+      RETENTION_DAYS: 30
+    #      EXTENSIONS: "*.log,*.tmp"
+
+    volumes:
+      - /share/Archive:/archive
+    pull_policy: always
+    restart: unless-stopped
