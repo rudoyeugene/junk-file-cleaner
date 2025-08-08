@@ -9,10 +9,10 @@ if [ -z "$SCHEDULE" ]; then
     tail -f /dev/null
 else
     # Create the cron file
-    echo "$SCHEDULE /cleanup_script.sh >> /var/log/cron.log 2>&1" > /etc/crontabs/root
+    echo "$SCHEDULE /cleanup_script.sh" > /etc/crontabs/root > /proc/1/fd/1 2>&1
     echo "Cron job configured: $SCHEDULE /cleanup_script.sh"
 
     # Start the cron daemon in the foreground
     echo "Starting cron daemon..."
-    crond -f -L /var/log/cron.log
+    crond -f
 fi

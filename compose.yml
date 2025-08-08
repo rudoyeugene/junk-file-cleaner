@@ -7,7 +7,6 @@ services:
       LOCATIONS: "/archive"
       RETENTION_DAYS: 30
     #      EXTENSIONS: "*.log,*.tmp"
-
     volumes:
       - /share/Archive:/archive
     pull_policy: always
