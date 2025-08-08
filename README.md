@@ -5,5 +5,6 @@
   * which you must also mount with volumes 
 * then removes all the files older than **RETENTION_DAYS**
 * or only the files with **EXTENSIONS**: "*.log,*.tmp"
+* or even the empty dirs are left after all junk files are gone because of **CLEANUP_EMPTY_DIRS**
 
 #### Created because of lack of any kind of housekeeping functionality on home NAS by QNAP: such as old syslogs, HDD scans, etc.
