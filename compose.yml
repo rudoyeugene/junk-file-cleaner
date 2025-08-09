@@ -3,7 +3,7 @@ services:
     image: rudoyeugene/playground:junk_file_cleaner
     container_name: junk-file-cleaner
     environment:
-      SCHEDULE: "0 2 * * *"
+      REPEAT_EVERY: 1m
       LOCATIONS: "/archive"
       RETENTION_DAYS: 30
     #      EXTENSIONS: "*.log,*.tmp"

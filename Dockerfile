@@ -1,8 +1,5 @@
 FROM alpine:latest
-RUN apk add --update --no-cache bash dcron
-COPY cleanup_script.sh /
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-RUN chmod +x /cleanup_script.sh
-ENTRYPOINT ["/entrypoint.sh"]
-CMD []
+RUN apk add --update --no-cache bash
+COPY cleaner.sh /
+RUN chmod +x /cleaner.sh
+CMD ["/cleaner.sh"]

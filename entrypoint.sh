@@ -4,7 +4,7 @@
 if [ -z "$SCHEDULE" ]; then
     echo "Error: SCHEDULE environment variable is not set. No cleanup will be scheduled."
     echo "Running cleanup script ONCE, without a schedule."
-    /cleanup_script.sh
+    /cleaner.sh
     # Keep the container running, but without a cron job
     tail -f /dev/null
 else
