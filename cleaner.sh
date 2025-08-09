@@ -2,7 +2,7 @@
 
 while true; do
   echo "================================"
-  echo date
+  echo "$(date +'%Y-%m-%d %H:%M:%S')"
   # Check if the LOCATIONS variable is set
   if [ -z "$LOCATIONS" ]; then
       echo "Error: LOCATIONS environment variable is not set. Nothing will be cleaned."
