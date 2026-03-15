@@ -1,6 +1,6 @@
 # junk-file-cleaner
 ## As simple as possible:
-* runs every **REPEAT_EVERY** (1 - second; 30 - seconds; 5m - minutes; 12h - 12 hours; 14d - 14 days)
+* runs every **REPEAT_EVERY** (1s - 1 second; 30s - 30 seconds; 5m - 5 minutes; 12h - 12 hours; 14d - 14 days)
 * searching the junks in **LOCATIONS**: "/archive,/logs"
   * which you must also mount with volumes 
 * then removes all the files older than **RETENTION_DAYS**
